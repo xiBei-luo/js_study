@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		img{
+			width: 500px;
+			height: 500px;
+			opacity: 0.3;
+			filter:alpha(opacity:30);
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var oImg=document.getElementById('img');
+			oImg.onmouseover=function(){
+				starMove(100);
+			}
+			oImg.onmouseout=function(){
+				starMove(30);
+			}
+		}
+		var timer=null;
+		var alpha=30;
+		function starMove(iTarget){
+			var oImg=document.getElementById('img');
+			clearInterval(timer);
+			timer=setInterval(function(){
+				var iSpeed=0;
+				if(alpha<iTarget){
+					iSpeed=1;
+				}
+				else{
+					iSpeed=-1;
+				}
+				
+				if(alpha==iTarget){
+					clearInterval(timer);
+				}
+				else{
+					alpha+=iSpeed;
+					oImg.style.filter='alpha(opacity:'+alpha+')';
+					oImg.style.opacity=alpha/100;
+
+					document.title=alpha;
+				}
+			},10)
+
+		}
+	</script>
+</head>
+<body>
+	<img src="12.jpg" id="img">
+</body>
+</html>
