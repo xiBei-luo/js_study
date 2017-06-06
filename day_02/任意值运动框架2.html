@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 50px;
+			background: red;
+			margin-top: 20px;
+			font-size: 12px;
+		}
+	</style>
+	<script type="text/javascript">
+
+	function getStyle(obj, attr)
+{
+	if(obj.currentStyle)
+	{
+		return obj.currentStyle[attr];
+	}
+	else
+	{
+		return getComputedStyle(obj, false)[attr];
+	}
+}
+
+
+		var timer=null;
+
+		window.onload=function(){
+			var aDiv=document.getElementsByTagName('div');
+
+			aDiv[0].onclick=function(){
+				starMove(this,'width',300);
+			}
+
+			aDiv[1].onclick=function(){
+				starMove(this,'height',200);
+			}
+
+			aDiv[2].onclick=function(){
+				starMove(this,'fontSize',50);
+			}
+
+			
+		}
+
+
+		
+		function starMove(obj,attr,iTarget){
+
+			clearInterval(obj.timer);
+
+			
+			obj.timer=setInterval(function(){
+
+				var iCur=parseInt(getStyle(obj,attr));//替换点offsetwidth自身存在的问题
+
+				var iSpeed=(iTarget-iCur)/8;
+				iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
+
+				if(iCur==iTarget){
+					clearInterval(timer);
+				}
+				else{
+					obj.style[attr]=iCur+iSpeed+'px';
+				}
+			},30)
+		}
+
+		
+	</script>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div>222222222</div>
+	<div></div>
+</body>
+</html>
