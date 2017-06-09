@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			width: 60px;
+			height:20px;
+			background: #1AB94D;
+			float: left;
+			margin-left: 40px;
+			list-style: none;
+			border:1px solid #000;
+			text-align: center;
+			position: relative;
+		}
+		li div{
+			background: #C6CF26;
+			margin-top: 5px;
+			position: absolute;
+			filter: alpha(opacity: 0);
+			overflow: hidden;
+			opacity: 0;
+			height: 0;
+		}
+	</style>
+	<script type="text/javascript" src="move2.js"></script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var oUl=document.getElementById('ul1');
+			var aLi=oUl.getElementsByTagName('li');
+
+			for(var i=0;i<aLi.length;i++){
+				aLi[i].onmouseover=function(){
+					var oDiv=this.getElementsByTagName('div')[0];
+
+					oDiv.style.height='auto';
+					var iHeight=oDiv.offsetHeight;
+					oDiv.style.height=0;
+
+					startMove(oDiv,{opacity:100,height:iHeight})
+				}
+
+				aLi[i].onmouseout=function(){
+					var oDiv=this.getElementsByTagName('div')[0];
+
+					startMove(oDiv,{opacity:0,height:0})
+				}
+			}
+
+
+		}
+	</script>
+</head>
+<body>
+	<ul id="ul1">
+		<li id="list">首页
+			<div id="div1">
+				skdjsjk<br>
+				skdjksa<br>
+				saldksla<br>
+				skdl<br>
+			</div>
+		</li>
+		<li>产品
+			<div>
+				skdjsjkdlfjkf <br>
+				dkfjkdf<br>
+				kdfjkds<br>
+				krewjeiwjfeow<br>
+				kkrjewj<br>
+				sdhsj<br>
+			</div>
+		</li>
+		<li>关于
+			<div>
+				krewje<br>
+				skfjkskls<br>
+				sldjks<br>
+			</div>
+		</li>
+	</ul>
+</body>
+</html>

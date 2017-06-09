@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{margin: 0;
+		padding: 0;}
+
+		#ul1{
+			width: 360px;
+			margin:0 auto;
+			position: relative;
+
+		}
+		#ul1 li{
+			width: 100px;
+			height: 100px;
+			float: left;
+			background: #ccc;
+			margin: 10px;
+			list-style: none;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var oUl=document.getElementById('ul1');
+			var aLi=oUl.getElementsByTagName('li');
+
+			for(var i=0;i<aLi.length;i++){
+				aLi[i].style.left=aLi[i].offsetLeft+'px';
+				aLi[i].style.top=aLi[i].offsetTop+'px';
+			}
+
+			for(var i=0;i<aLi.length;i++){
+				aLi[i].style.position='absolute';
+				aLi[i].style.margin='0';
+			}
+		}
+	</script>
+</head>
+<body>
+	<ul id="ul1">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>
