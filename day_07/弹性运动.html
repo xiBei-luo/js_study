@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#div1{
+			width: 100px;
+			height: 100px;
+			background: red;
+			position: absolute;
+			top:50px;
+		}
+		#div2{
+			width: 1px;
+			height: 300px;
+			background: #000;
+			position: absolute;
+			left: 300px;
+		}
+	</style>
+	<script type="text/javascript">
+		var iSpeed=0;
+
+		function startMove(){
+			var oDiv=document.getElementById('div1');
+
+			setInterval(function(){
+				iSpeed+=(300-oDiv.offsetLeft)/5;
+				iSpeed*=0.7;//加上摩擦力因素
+				oDiv.style.left=oDiv.offsetLeft+iSpeed+'px';
+			},30)
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="开始运动" onclick="startMove()" name="">
+	<div id="div1"></div>
+	<div id="div2"></div>
+</body>
+</html>
