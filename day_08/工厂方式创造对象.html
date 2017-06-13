@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function createPerson(name,sex){
+			//1.创建空白对象（原料）
+			var obj=new Object();
+
+
+			//2.，添加东西（加工）
+			obj.name=name;
+			obj.sex=sex;
+
+			obj.showName=function(){
+				alert("我的名字是"+this.name);
+			}
+			obj.showSex=function(){
+				alert("我是"+this.sex+"的");
+			}
+
+			//3.出厂
+			return obj;
+		}
+
+		var p1=createPerson('leo','女');
+		var p2=createPerson('lee','男');
+
+		p1.showName();
+		p1.showSex();
+		p2.showName();
+		p2.showSex();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

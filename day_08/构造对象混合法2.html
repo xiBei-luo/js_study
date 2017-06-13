@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function Createperson(name,sex){
+			this.name=name;
+			this.sex=sex;
+		}
+
+		Createperson.prototype.showName=function(){
+			alert('我的名字是'+this.name);
+		}
+		Createperson.prototype.showSex=function(){
+			alert('我的性别是'+this.sex);
+		}
+
+		var p=new Createperson('blue','女');
+		p.showName();
+		p.showSex();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
