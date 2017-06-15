@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		var arr1=[1,2,3];
+		var arr2=arr1;
+
+		arr2.push(4);//修改的是arr2的值，但是arr1和arr2都变了
+		//引用相当于拥有了进入“房间（空间）”的钥匙，但是并没有拥有整个“房间（空间）”。数据发生改变后两把钥匙打开房间看到的都是改变之后的场景。js中所有的对象都是引用
+
+		alert(arr1);
+		alert(arr2);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

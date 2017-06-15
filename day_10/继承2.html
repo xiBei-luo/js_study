@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function Person(name,sex){
+			this.name=name;
+			this.sex=sex;
+		}
+		Person.prototype.showName=function(){
+			alert(this.name);
+		}
+		Person.prototype.showSex=function(){
+			alert(this.sex);
+		}
+		
+
+		function Worker(name,sex,job){
+			Person.call(this,name,sex);
+			this.job=job;
+		}
+
+		//Worker.prototype=Person.prototype;//子类引用父类，子类的内容影响了父类
+		for(var i in Person.prototype){
+			Worker.prototype[i]=Person.prototype[i];
+		}//解决原型链的bug
+
+
+		Worker.prototype.showJob=function(){
+			alert(this.job);
+		}
+
+		var oW=new Worker('blue','男','工人');
+
+		oW.showName();
+		oW.showSex();
+		oW.showJob();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
