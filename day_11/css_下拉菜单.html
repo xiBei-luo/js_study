@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box{
+			position: relative;
+			left:100px;
+			display: inline-block;
+		}
+		.box_content{
+			display: none;
+			position: absolute;
+			left: -40px;
+			width: 100px;
+			height: 100px;
+			padding:10px;
+		}
+		.box_content a{
+			margin:3px;
+			background: #ccc;
+			display:inline-block;
+			width: 100px;
+			font-size: 18px;
+			line-height: 35px;
+			color: #000;
+			text-align: center;
+			text-decoration: none;
+		}
+		.box:hover .box_content{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<span>产品</span>
+		<div class="box_content">
+			<a href="#">html</a>
+			<a href="#">css</a>
+			<a href="#">js</a>
+		</div>
+	</div>
+</body>
+</html>

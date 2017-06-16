@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+		.box{
+			width: 1000px;
+			margin:0px auto;
+			text-align: center;
+		}
+		.box ul{
+			float: left;
+			position: relative;
+			width: 200px;
+			height: 50px;
+		}
+		ul>li{
+			display: none;
+		}
+		li>a{
+			background: #ccc;
+			display:inline-block;
+			width: 100px;
+			font-size: 18px;
+			line-height: 35px;
+			color: #000;
+			text-align: center;
+			text-decoration: none;
+			margin-top: 10px;
+		}
+		
+		ul:hover li{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul>首页
+			<li><a href="#">概述</a></li>
+			<li><a href="#">概述</a></li>
+			<li><a href="#">概述</a></li>
+		</ul>
+		<ul>产品
+			<li><a href="#">html</a></li>
+			<li><a href="#">html</a></li>
+			<li><a href="#">html</a></li>
+			<li><a href="#">html</a></li>
+		</ul>
+		<ul>荣誉
+			<li><a href="#">css</a></li>
+			<li><a href="#">css</a></li>
+			<li><a href="#">css</a></li>
+		</ul>
+		<ul>简介
+			<li><a href="#">js</a></li>
+			<li><a href="#">js</a></li>
+			<li><a href="#">js</a></li>
+			<li><a href="#">js</a></li>
+		</ul>
+		<ul>联系
+			<li><a href="#">关于</a></li>
+			<li><a href="#">关于</a></li>
+			<li><a href="#">关于</a></li>
+		</ul>
+	</div>
+</body>
+</html>
