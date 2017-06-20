@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.content{
+			display: flex;
+			flex-direction: column;
+		}
+		.container{
+			width: 480px;
+			height: 160px;
+			background: green;
+			display: flex;
+			flex-direction: row;
+			justify-content:space-between;
+		}
+		.flex-item{
+			width: 100px;
+			height: 100px;
+			margin:5px 0;
+			background: red;
+			align-self: center;
+		}
+		.img{
+			border-radius: 50%;
+		}
+		.desc{
+			flex: 2;
+			margin-left: 15px;
+		}
+		.down{
+			width: 156px;
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div class="container">
+			<div class="flex-item img"></div>
+			<div class="flex-item desc"></div>
+		</div>
+		<div class="container">
+			<div class="flex-item down"></div>
+			<div class="flex-item down"></div>
+			<div class="flex-item down"></div>
+		</div>
+	</div>
+</body>
+</html>
