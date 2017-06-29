@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul li{
+            width: 221px;
+            list-style: none;
+        }
+        .mt-menu li a{
+            display: block;
+            width: 200px;
+            padding:0 10px;
+            text-align: right;
+            position: relative;
+            z-index: 10;
+            height:97px;
+            border-right: 1px solid #ccc;
+            background: rgba(255,255,255,0.8);
+        }
+        .mt-menu li:hover a{
+            background: rgba(255, 239, 240, 0.4)
+        }
+        span{
+            display: block;
+        }
+        .mt-menu li a span:nth-child(2){
+            font-weight: 400px;
+            font-style: italic;
+            font-size: 28px;
+            font-family: 'Alegreya SC', Georgia, serif;
+
+            transition: color 0.2s linear;
+            -webkit-transition: color 0.2s linear;
+        }
+        .mt-menu li:nth-child(1):hover span:nth-child(2){
+            color: #ae3637;
+        }
+        .mt-menu li:nth-child(2):hover span:nth-child(2){
+			color: #c3d243;
+		}
+		.mt-menu li:nth-child(3):hover span:nth-child(2){
+			color: #d38439;
+		}
+		.mt-menu li:nth-child(4):hover span:nth-child(2){
+			color: #8e7463;
+		}
+
+
+        .mt-menu li img{
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top:20px;
+            opacity: 0;
+            transition: left 0.4s ease-in-out,opacity 0.6s ease-in-out;
+        }
+        .mt-menu li:hover img{
+            left: 280px;
+            opacity: 1;
+        }
+        a{
+            text-decoration: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <ul class="mt-menu">
+        <li>
+            <a href="">
+                <span>jdfhudjdkjk</span>
+                <span>Hkdjfk HSKJDKS</span>
+            </a>
+            <img src="03.jpg" alt="">
+        </li>
+        <li>
+            <a href="">
+                <span>jdfhudjdkjk</span>
+                <span>Hkdjfk HSKJDKS</span>
+            </a>
+            <img src="03.jpg" alt="">
+        </li>
+        <li>
+            <a href="">
+                <span>jdfhudjdkjk</span>
+                <span>Hkdjfk HSKJDKS</span>
+            </a>
+            <img src="03.jpg" alt="">
+        </li>
+        <li>
+            <a href="">
+                <span>jdfhudjdkjk</span>
+                <span>Hkdjfk HSKJDKS</span>
+            </a>
+            <img src="03.jpg" alt="">
+        </li>
+    </ul>
+</body>
+</html>
