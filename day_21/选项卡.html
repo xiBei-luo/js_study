@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		input{
+			width: 80px;
+			height: 30px;
+			border:none;
+			background: #09B761;
+			border-radius: 4px;
+		}
+		div{
+			width: 260px;
+			height: 150px;
+			background: #ccc;
+			position: absolute;
+			margin-top:10px;
+			display: none;
+		}
+		.active{
+			background: yellow;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var aBtn=document.getElementsByTagName('input');
+			var aDiv=document.getElementsByTagName('div');
+
+			for(var i=0;i<aBtn.length;i++){
+				aBtn[i].index=i;
+				aBtn[i].onclick=function(){
+					for(var i=0;i<aBtn.length;i++){
+						aBtn[i].className='';
+						aDiv[i].style.display='none';
+					}
+					aDiv[this.index].style.display="block";
+					this.className="active";
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="按钮1" name="">
+	<input type="button" value="按钮2" name="">
+	<input type="button" value="按钮3" name="">
+
+	<div>1所开发建设累计发卡量的数据发送到可是大家分开了速度递减卡死健康的快乐</div>
+	<div>2是肯德基看了撒谎的克里斯蒂斯凯立德可是大家分开了世界大赛拉开</div>
+	<div>3开飞机迪斯科吞吐量日日记两款发动机肯德基oridjfkldj加收借读费</div>
+</body>
+</html>

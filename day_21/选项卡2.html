@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		input{
+			width: 80px;
+			height: 30px;
+			background: #0D9660;
+			border:none;
+			border-radius: 5px;
+			margin-left: 15px;
+		}
+		div{
+			width: 280px;
+			height: 180px;
+			background: #ccc;
+			display: none;
+		}
+		.active{
+			background: red;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var aBtn=document.getElementsByTagName('input');
+			var aDiv=document.getElementsByTagName('div');
+
+			for(var i=0;i<aBtn.length;i++){
+				aBtn[i].index=i;
+				aBtn[i].onclick=function(){
+					for(var i=0;i<aBtn.length;i++){
+						aBtn[i].className='';
+						aDiv[i].style.display='none';
+					}
+					aDiv[this.index].style.display='block';
+					this.className='active';
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="按钮1" name="">
+	<input type="button" value="按钮2" name="">
+	<input type="button" value="按钮3" name="">
+
+	<div>1wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</div>
+	<div>2dddddddddddddddddddddddddddddddddddddddddd</div>
+	<div>3aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+</body>
+</html>
