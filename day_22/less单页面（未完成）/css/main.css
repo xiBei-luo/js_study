@@ -1,0 +1,35 @@
+@charset "utf-8";
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.container > * {
+  background: red;
+  margin-top: 10px;
+}
+.container header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.container header li {
+  display: inline-block;
+}
+.container header a {
+  text-decoration: none;
+  padding-left: 20px;
+  color: #000;
+}
+.container header a:hover {
+  color: green;
+}
+.container nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.container nav li {
+  display: inline-block;
+}
