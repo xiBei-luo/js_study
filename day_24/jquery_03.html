@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		ul li{
+			background: #000;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+		</ul>
+	</div>
+
+	<script src="jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$('ul li:even').css({background:'green'});
+		// 详细内容见API
+	</script>
+</body>
+</html>
