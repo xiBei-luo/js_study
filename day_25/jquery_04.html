@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box{
+			width: 600px;
+			height: 400px;
+			background: pink;
+			padding: 20px;
+			margin: 10px;
+			border:2px solid red;
+			position: relative;
+			margin:40px auto;
+		}
+		.cont{
+			width: 100px;
+			height: 100px;
+			background: green
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="cont"></div>
+	</div>
+
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+	$('.cont').click(function(){
+		console.log($(this).width())//获取和设置width属性,写值就是设置，没有值就是获取;返回数值类型，css('width')返回字符串类型
+	})
+	</script>
+</body>
+</html>

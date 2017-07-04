@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin:0px;
+        padding:0px;
+    }
+    .box{
+        width: 200px;
+        height: 200px;
+        border:3px solid red;
+        padding:20px;
+        position: absolute;
+        background: yellow;
+        left: 200px;
+        top:20px;
+    }
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+
+
+    <script type="text/javascript" src="jquery-3.2.1.js"></script>
+    <script>
+        var w=$(document).outerWidth()-$('.box').outerWidth();
+        var h=$(document).outerHeight()-$('.box').outerHeight();
+        $('.box').mousedown(function(e){
+            var x=e.clientX-$(this).offset().left,y=e.clientY-$(this).offset().top;
+
+            $(document).mousemove(function(e){
+                var newx=e.clientX-x,
+                    newy=e.clientY-y;
+
+                    newx<=0?newx=0:newx;
+                    newx>=w-20?newx=w:newx;
+                    newy<=0?newy=0:newy;
+                    newy>=h-20?newy=h:newy;//限制范围;-20添加磁力吸附效果
+                $('.box').css({left:newx,top:newy})
+            })
+
+            $(document).mouseup(function(){
+                $(document).off('mouseup');
+                $(document).off('mousemove');
+                //off()干掉事件，不能用原生js（直接把事件赋值为null）的方法
+            })
+        })
+    </script>
+</body>
+</html>

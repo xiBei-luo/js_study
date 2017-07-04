@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>筛选</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		span{
+			display: inline-block;
+			width: 200px;
+			height: 30px;
+			background: red;
+			line-height: 30px;
+		}
+		div{
+			width: 300px;
+			height: 200px;
+			background: green;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<span>烧烤活动结束</span>
+	<div></div>
+
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$('span').click(function(){
+			$('div').slideDown(1000)
+
+			//slideDown(速度值)从上往下滑动出现
+			//slideUp(速度值)从下往上滑动隐藏
+		})
+	</script>
+</body>
+</html>

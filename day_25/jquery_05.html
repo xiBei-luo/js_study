@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>筛选</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		.list li{
+			height: 50px;
+			background: pink;
+			margin:10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="list">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+		</ul>
+	</div>
+
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+	$('li').eq(-3).click(function(){
+		$(this).css({background:'red'});//eq()支持负数，倒数第一个从-1开始计数
+		//first()
+		//last()
+		//children()第一层子元素括号内可以放参数，比如元素的class名，children('.aaa')
+	})
+	</script>
+</body>
+</html>

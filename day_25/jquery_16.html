@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin:0px;
+        padding:0px;
+    }
+    .box{
+        min-height: 100px;
+        border:3px solid red;
+    }
+    .item{
+        background: pink;
+        margin-top: 10px;
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+    <input type="text" name="" id="txt"><br>
+    <input type="button" id="btn" value="发布" name="">
+
+
+    <script type="text/javascript" src="jquery-3.2.1.js"></script>
+    <script>
+       $('#btn').click(function(){
+            var _html=$('<div class="item">'+$('#txt').val()+'</div>');//创建新的元素
+            _html.click(function(){
+                $(this).remove();//为新元素添加事件
+            })
+            _html.appendTo($('.box'));//把新元素添加到box中
+            $('#txt').val('');//把输入框的值设为空
+       })
+       // $('.item').click(function(){
+       //  $(this).remove();//为所有的item节点添加点击删除事件;若原本文档中本来就没有item可以不加这一事件
+       // })
+    </script>
+</body>
+</html>

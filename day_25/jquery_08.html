@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>筛选</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		span{
+			display: inline-block;
+			width: 200px;
+			height: 30px;
+			background: red;
+			line-height: 30px;
+		}
+		div{
+			width: 300px;
+			height: 200px;
+			background: green;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<span>烧烤活动结束</span>
+	<div></div>
+
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$('span').click(function(){
+			$('div').stop().delay(2000).slideToggle(1000)
+		})
+		//slideToggle()使用两种情况，减少判断这一过程
+		//弱点:不断点击会出现动画不停止的效果,因此需要加上stop
+		//delay延迟
+	</script>
+</body>
+</html>
