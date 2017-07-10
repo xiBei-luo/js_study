@@ -9,6 +9,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	overflow: hidden;
 }
 nav{
 	background: #5E5E5E;
@@ -229,6 +230,48 @@ footer ul{
 	padding-bottom:20px;
 }
 
+.sidebar{
+	width: 300px;
+	background: #333;
+	color:#fff;
+	position: fixed;
+	top:0;
+	right: -300px;
+	bottom: 0;
+	z-index: 3;
+	padding:20px 0;
+	transition:right 0.5s
+}
+.sidebar ul{
+	list-style: none;
+	padding:10px 0px;
+	margin:0px;
+}
+.sidebar ul a{
+	padding:10px 30px;
+	display: inline-block;
+	text-decoration: none;
+	color:#fff;
+}
+.sidebar ul a:hover{
+	background: #444;
+	width: 100%;
+}
+.mask{
+	display: none;
+	position: fixed;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.4)
+}
+.backTop{
+	position: fixed;
+	bottom: 30px;
+	right:30px;
+	border:1px solid #fff;
+}
 
 
 
