@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <title>Document</title>
+    <style type="text/css">
+        body{
+            padding-top: 50px;
+            padding-bottom: 30px;
+        }
+        .carousel{
+            margin-bottom: 60px;
+        }
+        .carousel .item{
+            height: 500px;
+            background-color: #000;
+        }
+        .carousel-caption{
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+        #summary-container .col-md-4{
+            text-align: center;
+        }
+        .divider{
+            margin:40px 0;
+        }
+        .feature{
+            margin:30px auto;
+        }
+        .feature-heading{
+            font-size: 50px;
+            color:#2a6496;
+            margin-top: 120px;
+        }
+        .feature-heading .text-muted{
+            font-size: 28px;
+            color:#ccc;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">现代浏览器博物馆</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">综述 <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">简述</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">特点 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">chrome</a></li>
+            <li><a href="#">firefox</a></li>
+            <li><a href="#">safari</a></li>
+            <li><a href="#">opare</a></li>
+            <li><a href="#">IE</a></li>
+          </ul>
+        </li>
+        <li><a href="#" data-toggle="modal" data-target="#about">关于</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="images/chrome-big.jpg" alt="...">
+      <div class="carousel-caption">
+        <h1>chrome</h1>
+        <p>看似简单即是空金额均快速健康的垃圾啊胜利大街上了解到卡拉三季度</p>
+        <p><a href="#" class="btn btn-lg btn-primary" target="_blank" role="button">点我下载</a></p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/firefox-big.jpg" alt="...">
+      <div class="carousel-caption">
+        <h1>firefox</h1>
+        <p>看似简单即是空金额均快速健康的垃圾啊胜利大街上了解到卡拉三季度</p>
+        <p><a href="#" class="btn btn-lg btn-primary" target="_blank" role="button">点我下载</a></p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/ie-big.jpg" alt="...">
+      <div class="carousel-caption">
+        <h1>ie</h1>
+        <p>看似简单即是空金额均快速健康的垃圾啊胜利大街上了解到卡拉三季度</p>
+        <p><a href="#" class="btn btn-lg btn-primary" target="_blank" role="button">点我下载</a></p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/opera-big.jpg" alt="...">
+      <div class="carousel-caption">
+        <h1>opera</h1>
+        <p>看似简单即是空金额均快速健康的垃圾啊胜利大街上了解到卡拉三季度</p>
+        <p><a href="#" class="btn btn-lg btn-primary" target="_blank" role="button">点我下载</a></p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/safari-big.jpg" alt="...">
+      <div class="carousel-caption">
+        <h1>safari</h1>
+        <p>看似简单即是空金额均快速健康的垃圾啊胜利大街上了解到卡拉三季度</p>
+        <p><a href="#" class="btn btn-lg btn-primary" target="_blank" role="button">点我下载</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">上一页</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">下一页</span>
+  </a>
+</div>
+
+
+    <div class="container" id="summary-container">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="images/chrome-logo-small.jpg">
+            <h2>chrome</h2>
+            <p>烧烤活动结束到卡拉三季度看来撒娇大赛的距离萨克到卡拉撒娇世界第三空间打开</p>
+            <p><a href="#" class="btn btn-default">点击下载</a></p>
+          </div>
+          <div class="col-md-4">
+            <img src="images/firefox-logo-small.jpg">
+            <h2>firefox</h2>
+            <p>烧烤活动结束到卡拉三季度看来撒娇大赛的距离萨克到卡拉撒娇世界第三空间打开</p>
+            <p><a href="#" class="btn btn-default">点击下载</a></p>
+          </div>
+          <div class="col-md-4">
+            <img src="images/safari-logo-small.jpg">
+            <h2>safari</h2>
+            <p>烧烤活动结束到卡拉三季度看来撒娇大赛的距离萨克到卡拉撒娇世界第三空间打开</p>
+            <p><a href="#" class="btn btn-default">点击下载</a></p>
+          </div>
+        </div>
+    <hr class="divider">
+    </div>
+
+    <div class="container">
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">chrome</a></li>
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">firefox</a></li>
+        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">safari</a></li>
+        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">opera</a></li>
+        <li role="presentation"><a href="#ie" aria-controls="ie" role="tab" data-toggle="tab">IE</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">
+            <div class="row feature">
+                <div class="col-md-7">
+                    <h2 class="feature-heading">chrome <span class="text-muted">程序员首选</span></h2>
+                    <p class="lead">谷歌浏览器一般指Google ChromeGoogle Chrome是一款由Google公司开发的网页浏览器</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="images/chrome-logo.jpg" class="feature-image img-responsive">
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="profile">
+            <div class="row feature">
+                <div class="col-md-5">
+                    <img src="images/firefox-logo.jpg" class="feature-image img-responsive">
+                </div>
+                <div class="col-md-7">
+                    <h2 class="feature-heading">firefox <span class="text-muted">程序员首选</span></h2>
+                    <p class="lead">谷歌浏览器一般指Google ChromeGoogle Chrome是一款由Google公司开发的网页浏览器</p>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="messages">
+            <div class="row feature">
+                <div class="col-md-7">
+                    <h2 class="feature-heading">safari <span class="text-muted">程序员首选</span></h2>
+                    <p class="lead">谷歌浏览器一般指Google ChromeGoogle Chrome是一款由Google公司开发的网页浏览器</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="images/safari-logo.jpg" class="feature-image img-responsive">
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="settings">
+            <div class="row feature">
+                <div class="col-md-5">
+                    <img src="images/opera-logo.jpg" class="feature-image img-responsive">
+                </div>
+                <div class="col-md-7">
+                    <h2 class="feature-heading">opera <span class="text-muted">程序员首选</span></h2>
+                    <p class="lead">谷歌浏览器一般指Google ChromeGoogle Chrome是一款由Google公司开发的网页浏览器</p>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="ie">
+            <div class="row feature">
+                <div class="col-md-7">
+                    <h2 class="feature-heading">IE <span class="text-muted">程序员首选</span></h2>
+                    <p class="lead">谷歌浏览器一般指Google ChromeGoogle Chrome是一款由Google公司开发的网页浏览器</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="images/IE-logo.jpg" class="feature-image img-responsive">
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider"></hr>
+
+
+    <footer class="container">
+        <p class="pull-right"><a href="">回到顶部</a></p>
+        <p>2017@copyright</p>
+    </footer>
+
+<!-- 弹出框 -->
+<div class="modal fade" id="about" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">关于我们</h4>
+      </div>
+      <div class="modal-body">
+        <p>三类贷款数据大幅扩大飞机快多了几分到卡拉撒娇分开了第三方扣篮大赛解放开绿灯撒打开解放开绿灯撒解放昆仑山大家风力减弱了口扩大解放开绿灯撒解放了的时间飞快的距离而剧烈咳嗽</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">知道了</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
